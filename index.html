@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 4px solid black;
+            animation-name: spin;
+            animation-duration: 2s;
+            
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+<img src="./cup.png" alt="" width="100%" height="100%">
+    </div>
+    <script>
+        function cir(){
+            document.getElementsByClassName('container')[0].style.borderRadius="50%";
+            document.getElementsByClassName('container')[0].style.borderColor="yellow";
+            document.getElementsByClassName('container')[0].style.transitionDuration="1s";
+        }
+        setTimeout(cir,1000)
+    </script>
+</body>
+
+</html>
